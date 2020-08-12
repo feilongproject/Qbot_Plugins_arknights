@@ -15,20 +15,14 @@ function Star03(AKjson)
     local now_star_str = AKjson["str"]["star03"]
     --log.notice("04为 ---->%s", now_star_str)
     Finally_star = now_star_str .. now_star_name
-
 end
 
 function Star04(AKjson)
     local randomnum = AKjson["num"]["star04"]
-    --log.notice("11为 ---->%s", randomnum)
     local star_random = math.random(1, randomnum)
-    --log.notice("12为 ---->%s", star_random)
     local now_star_name = AKjson["characters"]["star04"][star_random]
-    --log.notice("13为 ---->%s", now_star_name)
     local now_star_str = AKjson["str"]["star04"]
-    --log.notice("14为 ---->%s", now_star_str)
     Finally_star = now_star_str .. now_star_name
-
 end
 
 function Star05(AKjson)
@@ -67,37 +61,22 @@ end
 
 function AKrandom_once(AKjson)
     local AKandomtimes = math.random(1, 100021)
-    --log.notice("随机数为 ---->%s", AKandomtimes)
+    log.notice("随机数为 ---->%s", AKandomtimes)
     if AKandomtimes <= 40000 then
         Star03(AKjson)
-        return 1
-    else
-        if AKandomtimes <= 90000 then
-            Star04(AKjson)
-            return 1
-        else
-            if AKandomtimes <= 98000 then
-                Star05(AKjson)
-                return 1
-            else
-                if AKandomtimes <= 100000 then
-                    Star06(AKjson)
-                    return 1
-                else
-                    if AKandomtimes <= 100020 then
-                        Star07(AKjson)
-                        return 1
-                    else
-                        if AKandomtimes == 100021 then
-                            Star42(AKjson)
-                            return 1
-                        end
-                    end
-                end
-            end
-        end
+    elseif AKandomtimes <= 90000 then
+        Star04(AKjson)
+    elseif AKandomtimes <= 98000 then
+        Star05(AKjson)
+    elseif AKandomtimes <= 100000 then
+        Star06(AKjson)
+    elseif AKandomtimes <= 100020 then
+        Star07(AKjson)
+    elseif AKandomtimes == 100021 then
+        Star42(AKjson)
     end
 end
+
 
 function ReceiveGroupMsg(CurrentQQ, data)
     if string.find(data.Content, "#方舟十连") == 1 then
