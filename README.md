@@ -1,5 +1,5 @@
 # 明日方舟OPQbot插件
-这里是[OPQ_BOT](https://github.com/OPQBOT/OPQ)的插件，部署自理
+这里是[OPQ_BOT](https://github.com/OPQBOT/OPQ)的插件，部署请见[官方文档](https://github.com/OPQBOT/OPQ/wiki/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97)
 
 
 ## 使用方法：
