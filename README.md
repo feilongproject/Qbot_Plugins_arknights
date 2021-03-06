@@ -1,9 +1,12 @@
 # 明日方舟OPQbot插件
 这里是[OPQ_BOT](https://github.com/OPQBOT/OPQ)的插件，部署请见[官方文档](https://github.com/OPQBOT/OPQ/wiki/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97)
 
+## TODO
+1. 重新优化逻辑，让代码更简洁
+2. 实现一句命令更新干员功能（数据来源暂定）
 
 ## 使用方法：
-在群聊内输入`#方舟十连`即可
+在群聊内输入`#方舟十连` 或者`#方舟单抽`即可
 
 ## 如何修改：
 直接修改arknights.lua里的`starX_name`（X代表星数），数据使用json格式，最后会自动计算数量
